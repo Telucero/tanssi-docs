@@ -397,7 +397,7 @@ jobs:
               username: mergedBy,
             });
             const permission = (data && data.permission) ? data.permission : 'none';
-            const allowedPermissions = new Set(['admin', 'maintain']);
+            const allowedPermissions = new Set(['admin', 'maintain', 'write']);
             const allowed = allowedPermissions.has(permission) ? 'true' : 'false';
             core.info(`Merged-by actor ${mergedBy} has permission level: ${permission}`);
             core.setOutput('allowed', allowed);
